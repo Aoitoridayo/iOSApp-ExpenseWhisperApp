@@ -28,6 +28,7 @@
 		8BE8C6E02A27361100EC33EB /* MainCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C6DF2A27361100EC33EB /* MainCardView.swift */; };
 		8BE8C6E22A27362100EC33EB /* Front.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C6E12A27362100EC33EB /* Front.swift */; };
 		8BE8C6E42A27362A00EC33EB /* Back.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C6E32A27362A00EC33EB /* Back.swift */; };
+		8BE8C6E62A27541600EC33EB /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C6E52A27541600EC33EB /* ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		8BE8C6DF2A27361100EC33EB /* MainCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardView.swift; sourceTree = "<group>"; };
 		8BE8C6E12A27362100EC33EB /* Front.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Front.swift; sourceTree = "<group>"; };
 		8BE8C6E32A27362A00EC33EB /* Back.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Back.swift; sourceTree = "<group>"; };
+		8BE8C6E52A27541600EC33EB /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 		8BE8C6CC2A2734F000EC33EB /* Chart */ = {
 			isa = PBXGroup;
 			children = (
+				8BE8C6E52A27541600EC33EB /* ChartView.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				8BE8C6A82A27320200EC33EB /* ExpenseWhisperAppApp.swift in Sources */,
 				8BE8C6C22A2733AA00EC33EB /* UsedCost.swift in Sources */,
 				8BE8C6BC2A2732E200EC33EB /* InputError.swift in Sources */,
+				8BE8C6E62A27541600EC33EB /* ChartView.swift in Sources */,
 				8BE8C6D82A27359600EC33EB /* HomeView.swift in Sources */,
 				8BE8C6D62A27356B00EC33EB /* SettingView.swift in Sources */,
 				8BE8C6C42A2733E500EC33EB /* MainCardData.swift in Sources */,

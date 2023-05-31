@@ -8,8 +8,57 @@
 import SwiftUI
 
 struct MainTabView: View {
+    
+    enum Tabs: String, CaseIterable, Identifiable {
+        case home = "ホーム"
+        case input = "入力"
+        case charts = "情報"
+        case setting = "設定"
+        
+        var id: Self { self }
+    }
+    
+    @State private var navigationTitle: String = Tabs.home.rawValue
+    @State private var selectionTab: Tabs = .home
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            TabView(selection: $selectionTab) {
+                HomeView()
+                    .tabItem({
+                        VStack {
+                            Image(systemName: "house")
+                            Text("ホーム")
+                        }
+                    })
+                    .tag(Tabs.home)
+                
+                InputView()
+                    .tabItem({
+                        Image(systemName: "note.text")
+                        Text("詳細")
+                    })
+                    .tag(Tabs.input)
+                
+                ChartView()
+                    .tabItem({
+                        VStack {
+                            Image(systemName: "chart.bar")
+                            Text("データ")
+                        }
+                    })
+                    .tag(Tabs.charts)
+                
+                SettingView()
+                    .tabItem({
+                        VStack {
+                            Image(systemName: "gearshape")
+                            Text("設定")
+                        }
+                    })
+                    .tag(Tabs.setting)
+            }
+        }
     }
 }
 
