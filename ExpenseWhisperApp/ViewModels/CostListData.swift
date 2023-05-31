@@ -23,4 +23,8 @@ class CostListData: ObservableObject {
     func didTapCancelButton() {
         isAddView = false
     }
+    
+    func didTapPlusButton() {
+        isAddView = true
+    }
 }

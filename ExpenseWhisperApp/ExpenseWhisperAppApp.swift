@@ -12,6 +12,8 @@ struct ExpenseWhisperAppApp: App {
     var body: some Scene {
         WindowGroup {
             MainTabView()
+                .environmentObject(MainCardData())
+                .environmentObject(DetailCardData())
         }
     }
 }

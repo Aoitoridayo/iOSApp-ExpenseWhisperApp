@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Cost {
+struct Cost: Identifiable {
     let id = UUID()
     var title: String
     var price: Int

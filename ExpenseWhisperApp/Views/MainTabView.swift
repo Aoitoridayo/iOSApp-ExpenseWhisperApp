@@ -33,7 +33,7 @@ struct MainTabView: View {
                     })
                     .tag(Tabs.home)
                 
-                InputView()
+                CostListView()
                     .tabItem({
                         Image(systemName: "note.text")
                         Text("詳細")
@@ -65,5 +65,7 @@ struct MainTabView: View {
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
         MainTabView()
+            .environmentObject(MainCardData())
+            .environmentObject(DetailCardData())
     }
 }
