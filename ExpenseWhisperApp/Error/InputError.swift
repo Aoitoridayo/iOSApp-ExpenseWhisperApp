@@ -17,11 +17,11 @@ enum InputError: Error {
         switch self {
             
         case .emptyTitle:
-            return "タイトルを入力してください"
+            return "タイトル未入力"
         case .wrongPrice:
-            return "正しい金額を入力してください"
+            return "不正な金額"
         case .emptyCategory:
-            return "カテゴリーを選択してください"
+            return "カテゴリー未選択"
         case .unknown:
             return "不明なエラー"
         }

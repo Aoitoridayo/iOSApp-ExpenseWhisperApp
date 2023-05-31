@@ -17,6 +17,9 @@ struct InputView: View {
     @State private var detail = ""
     @State private var category: CostCategory = CostCategory.food
     
+    @State private var isAlert = false
+    @State private var message = ""
+    
     let save: (Cost) -> Void
     let cancel: () -> Void
     
@@ -74,7 +77,7 @@ struct InputView: View {
                             detailCardData.plusCost(cost: item)
                         } catch {
                             let error = error as? InputError ?? InputError.unknown
-                            print(error.title)
+                            showAlert(message: error.title)
                         }
                     }) {
                         Text("追加")
@@ -84,7 +87,9 @@ struct InputView: View {
             .navigationTitle("新規作成")
             .navigationBarTitleDisplayMode(.inline)
         }
+        .alert(message, isPresented: $isAlert, actions: {})
     }
+    
     private func create() throws -> Cost {
         guard !title.isEmpty else {
             throw InputError.emptyTitle
@@ -94,6 +99,11 @@ struct InputView: View {
         }
         let item = Cost(title: title, price: price, category: category)
         return item
+    }
+    
+    private func showAlert(message: String) {
+        self.message = message
+        isAlert = true
     }
 }
 
