@@ -8,8 +8,31 @@
 import SwiftUI
 
 struct CostListView: View {
+    @StateObject var costListData = CostListData()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ZStack {
+                if costListData.costList.isEmpty {
+                    Image("backImage")
+                        .resizable()
+                        .scaledToFit()
+                } else {
+                    List {
+                        ForEach(costListData.costList) { item in
+                            ListRow(item: item)
+                        }
+                        .onDelete(perform: costListData.delete)
+                    }
+                    .listStyle(InsetListStyle())
+                }
+                PlusButton(action: costListData.didTapPlusButton)
+            }
+        }
+        .sheet(isPresented: $costListData.isAddView) {
+            InputView(save: costListData.didTapSaveButton,
+                      cancel: costListData.didTapCancelButton)
+        }
     }
 }
 
