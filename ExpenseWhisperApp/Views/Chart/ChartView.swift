@@ -6,11 +6,20 @@
 //
 
 import SwiftUI
+import Charts
 
 struct ChartView: View {
+    @EnvironmentObject var detailCardData: DetailCardData
+    
     var body: some View {
         NavigationStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            ScrollView {
+                Spacer()
+                VStack {
+                    ChartCard()
+                }
+                .padding(.horizontal, 50)
+            }
         }
     }
 }
@@ -18,5 +27,6 @@ struct ChartView: View {
 struct ChartView_Previews: PreviewProvider {
     static var previews: some View {
         ChartView()
+            .environmentObject(DetailCardData())
     }
 }

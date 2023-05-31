@@ -11,4 +11,5 @@ struct UsedCost: Identifiable {
     let id = UUID()
     var usedCost: Int
     let category: CostCategory
+    let empty: String
 }

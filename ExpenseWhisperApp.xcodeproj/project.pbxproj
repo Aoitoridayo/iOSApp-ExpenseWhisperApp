@@ -29,6 +29,11 @@
 		8BE8C6E22A27362100EC33EB /* Front.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C6E12A27362100EC33EB /* Front.swift */; };
 		8BE8C6E42A27362A00EC33EB /* Back.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C6E32A27362A00EC33EB /* Back.swift */; };
 		8BE8C6E62A27541600EC33EB /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C6E52A27541600EC33EB /* ChartView.swift */; };
+		8BE8C6EA2A27674900EC33EB /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C6E92A27674900EC33EB /* ChartData.swift */; };
+		8BE8C6EC2A27677D00EC33EB /* CostChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C6EB2A27677D00EC33EB /* CostChart.swift */; };
+		8BE8C6EE2A27708500EC33EB /* ChartCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C6ED2A27708500EC33EB /* ChartCard.swift */; };
+		8BE8C7122A277FE700EC33EB /* RankingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C7112A277FE700EC33EB /* RankingCard.swift */; };
+		8BE8C7152A27830B00EC33EB /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C7142A27830B00EC33EB /* URLManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +60,11 @@
 		8BE8C6E12A27362100EC33EB /* Front.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Front.swift; sourceTree = "<group>"; };
 		8BE8C6E32A27362A00EC33EB /* Back.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Back.swift; sourceTree = "<group>"; };
 		8BE8C6E52A27541600EC33EB /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		8BE8C6E92A27674900EC33EB /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		8BE8C6EB2A27677D00EC33EB /* CostChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostChart.swift; sourceTree = "<group>"; };
+		8BE8C6ED2A27708500EC33EB /* ChartCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCard.swift; sourceTree = "<group>"; };
+		8BE8C7112A277FE700EC33EB /* RankingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCard.swift; sourceTree = "<group>"; };
+		8BE8C7142A27830B00EC33EB /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +122,8 @@
 				8BE8C6BD2A27332C00EC33EB /* Cost.swift */,
 				8BE8C6BF2A27334D00EC33EB /* CostCategory.swift */,
 				8BE8C6C12A2733AA00EC33EB /* UsedCost.swift */,
+				8BE8C6EB2A27677D00EC33EB /* CostChart.swift */,
+				8BE8C7142A27830B00EC33EB /* URLManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -134,6 +146,7 @@
 				8BE8C6C32A2733E500EC33EB /* MainCardData.swift */,
 				8BE8C6C52A27344100EC33EB /* DetailCardData.swift */,
 				8BE8C6C72A27348500EC33EB /* CostListData.swift */,
+				8BE8C6E92A27674900EC33EB /* ChartData.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -179,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				8BE8C6E52A27541600EC33EB /* ChartView.swift */,
+				8BE8C6ED2A27708500EC33EB /* ChartCard.swift */,
+				8BE8C7112A277FE700EC33EB /* RankingCard.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -275,18 +290,23 @@
 				8BE8C6C22A2733AA00EC33EB /* UsedCost.swift in Sources */,
 				8BE8C6BC2A2732E200EC33EB /* InputError.swift in Sources */,
 				8BE8C6E62A27541600EC33EB /* ChartView.swift in Sources */,
+				8BE8C6EA2A27674900EC33EB /* ChartData.swift in Sources */,
 				8BE8C6D82A27359600EC33EB /* HomeView.swift in Sources */,
 				8BE8C6D62A27356B00EC33EB /* SettingView.swift in Sources */,
 				8BE8C6C42A2733E500EC33EB /* MainCardData.swift in Sources */,
+				8BE8C7122A277FE700EC33EB /* RankingCard.swift in Sources */,
 				8BE8C6C82A27348500EC33EB /* CostListData.swift in Sources */,
 				8BE8C6E42A27362A00EC33EB /* Back.swift in Sources */,
 				8BE8C6E22A27362100EC33EB /* Front.swift in Sources */,
 				8BE8C6DE2A2735E700EC33EB /* DetailCardView.swift in Sources */,
+				8BE8C7152A27830B00EC33EB /* URLManager.swift in Sources */,
 				8BE8C6E02A27361100EC33EB /* MainCardView.swift in Sources */,
+				8BE8C6EC2A27677D00EC33EB /* CostChart.swift in Sources */,
 				8BE8C6BE2A27332C00EC33EB /* Cost.swift in Sources */,
 				8BE8C6D02A27353500EC33EB /* CostListView.swift in Sources */,
 				8BE8C6C02A27334D00EC33EB /* CostCategory.swift in Sources */,
 				8BE8C6D22A27354000EC33EB /* ListRow.swift in Sources */,
+				8BE8C6EE2A27708500EC33EB /* ChartCard.swift in Sources */,
 				8BE8C6CE2A27352800EC33EB /* InputView.swift in Sources */,
 				8BE8C6C62A27344100EC33EB /* DetailCardData.swift in Sources */,
 				8BE8C6B62A27327D00EC33EB /* MainTabView.swift in Sources */,

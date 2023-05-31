@@ -38,17 +38,17 @@ enum CostCategory {
         switch self {
             
         case .food:
-            return Color.green
-        case .transportation:
             return Color.blue
+        case .transportation:
+            return Color.green
         case .entertainment:
-            return Color.pink
+            return Color.orange
         case .medicalAndCosme:
-            return Color.brown
+            return Color.purple
         case .livingware:
-            return Color.yellow
+            return Color.red
         case .others:
-            return Color.gray
+            return Color.teal
         }
     }
 }

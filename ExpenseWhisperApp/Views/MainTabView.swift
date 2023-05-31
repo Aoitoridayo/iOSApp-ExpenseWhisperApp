@@ -19,6 +19,8 @@ struct MainTabView: View {
     }
     
     @EnvironmentObject var mainCardData: MainCardData
+    @EnvironmentObject var detailCardData: DetailCardData
+    
     @State private var navigationTitle: String = Tabs.home.rawValue
     @State private var selectionTab: Tabs = .home
     
@@ -64,6 +66,7 @@ struct MainTabView: View {
             .onChange(of: selectionTab) { _ in
                 navigationTitle = selectionTab.rawValue
             }
+            .onAppear(perform: detailCardData.updata)
             .onAppear(perform: mainCardData.onAppear)
         }
     }

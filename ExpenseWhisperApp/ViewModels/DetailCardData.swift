@@ -10,12 +10,12 @@ import Foundation
 class DetailCardData: ObservableObject {
     
     @Published var costs: [UsedCost] = [
-        UsedCost(usedCost: 0, category: CostCategory.food),
-        UsedCost(usedCost: 0, category: CostCategory.transportation),
-        UsedCost(usedCost: 0, category: CostCategory.entertainment),
-        UsedCost(usedCost: 0, category: CostCategory.medicalAndCosme),
-        UsedCost(usedCost: 0, category: CostCategory.livingware),
-        UsedCost(usedCost: 0, category: CostCategory.others)
+        UsedCost(usedCost: 0, category: CostCategory.food, empty: "食"),
+        UsedCost(usedCost: 0, category: CostCategory.transportation, empty: "交"),
+        UsedCost(usedCost: 0, category: CostCategory.entertainment, empty: "娯"),
+        UsedCost(usedCost: 0, category: CostCategory.medicalAndCosme, empty: "医"),
+        UsedCost(usedCost: 0, category: CostCategory.livingware, empty: "生"),
+        UsedCost(usedCost: 0, category: CostCategory.others, empty: "他")
     ]
     
     func plusCost(cost: Cost) {
@@ -32,6 +32,14 @@ class DetailCardData: ObservableObject {
             self.costs[4].usedCost += cost.price
         case .others:
             self.costs[5].usedCost += cost.price
+        }
+    }
+    
+    func updata() {
+        MainCardData.used = 0
+        
+        for cost in costs {
+            MainCardData.used += cost.usedCost
         }
     }
     
