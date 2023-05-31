@@ -8,5 +8,8 @@
 import Foundation
 
 struct Cost {
-    
+    let id = UUID()
+    var title: String
+    var price: Int
+    var category: CostCategory
 }
