@@ -34,6 +34,10 @@
 		8BE8C6EE2A27708500EC33EB /* ChartCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C6ED2A27708500EC33EB /* ChartCard.swift */; };
 		8BE8C7122A277FE700EC33EB /* RankingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C7112A277FE700EC33EB /* RankingCard.swift */; };
 		8BE8C7152A27830B00EC33EB /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C7142A27830B00EC33EB /* URLManager.swift */; };
+		8BE8C7172A27862C00EC33EB /* TermsOfServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C7162A27862C00EC33EB /* TermsOfServiceView.swift */; };
+		8BE8C71A2A2786C400EC33EB /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C7192A2786C400EC33EB /* Title.swift */; };
+		8BE8C71C2A2786CE00EC33EB /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C71B2A2786CE00EC33EB /* Detail.swift */; };
+		8BE8C71E2A278C5900EC33EB /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C71D2A278C5900EC33EB /* ShareView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +69,10 @@
 		8BE8C6ED2A27708500EC33EB /* ChartCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCard.swift; sourceTree = "<group>"; };
 		8BE8C7112A277FE700EC33EB /* RankingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCard.swift; sourceTree = "<group>"; };
 		8BE8C7142A27830B00EC33EB /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
+		8BE8C7162A27862C00EC33EB /* TermsOfServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfServiceView.swift; sourceTree = "<group>"; };
+		8BE8C7192A2786C400EC33EB /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		8BE8C71B2A2786CE00EC33EB /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		8BE8C71D2A278C5900EC33EB /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				8BE8C6D52A27356B00EC33EB /* SettingView.swift */,
+				8BE8C71D2A278C5900EC33EB /* ShareView.swift */,
+				8BE8C7182A2786A600EC33EB /* TermsOfService */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -214,6 +224,16 @@
 				8BE8C6DD2A2735E700EC33EB /* DetailCardView.swift */,
 			);
 			path = DetailCard;
+			sourceTree = "<group>";
+		};
+		8BE8C7182A2786A600EC33EB /* TermsOfService */ = {
+			isa = PBXGroup;
+			children = (
+				8BE8C7162A27862C00EC33EB /* TermsOfServiceView.swift */,
+				8BE8C7192A2786C400EC33EB /* Title.swift */,
+				8BE8C71B2A2786CE00EC33EB /* Detail.swift */,
+			);
+			path = TermsOfService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BE8C6A82A27320200EC33EB /* ExpenseWhisperAppApp.swift in Sources */,
+				8BE8C71A2A2786C400EC33EB /* Title.swift in Sources */,
 				8BE8C6C22A2733AA00EC33EB /* UsedCost.swift in Sources */,
 				8BE8C6BC2A2732E200EC33EB /* InputError.swift in Sources */,
 				8BE8C6E62A27541600EC33EB /* ChartView.swift in Sources */,
@@ -299,13 +320,16 @@
 				8BE8C6E42A27362A00EC33EB /* Back.swift in Sources */,
 				8BE8C6E22A27362100EC33EB /* Front.swift in Sources */,
 				8BE8C6DE2A2735E700EC33EB /* DetailCardView.swift in Sources */,
+				8BE8C71E2A278C5900EC33EB /* ShareView.swift in Sources */,
 				8BE8C7152A27830B00EC33EB /* URLManager.swift in Sources */,
 				8BE8C6E02A27361100EC33EB /* MainCardView.swift in Sources */,
 				8BE8C6EC2A27677D00EC33EB /* CostChart.swift in Sources */,
 				8BE8C6BE2A27332C00EC33EB /* Cost.swift in Sources */,
 				8BE8C6D02A27353500EC33EB /* CostListView.swift in Sources */,
 				8BE8C6C02A27334D00EC33EB /* CostCategory.swift in Sources */,
+				8BE8C7172A27862C00EC33EB /* TermsOfServiceView.swift in Sources */,
 				8BE8C6D22A27354000EC33EB /* ListRow.swift in Sources */,
+				8BE8C71C2A2786CE00EC33EB /* Detail.swift in Sources */,
 				8BE8C6EE2A27708500EC33EB /* ChartCard.swift in Sources */,
 				8BE8C6CE2A27352800EC33EB /* InputView.swift in Sources */,
 				8BE8C6C62A27344100EC33EB /* DetailCardData.swift in Sources */,

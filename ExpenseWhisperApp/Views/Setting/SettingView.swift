@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SettingView: View {
+    @State private var isTerms = false
+    @State private var isShared = false
     var body: some View {
         NavigationStack {
             List {
@@ -17,11 +19,19 @@ struct SettingView: View {
                 
                 Section(content: {
                     Text("レビューを書く")
-                    Text("アプリをシェア")
+                    Button(action: {
+                        isShared = true
+                    }) {
+                        Text("アプリをシェア")
+                    }
                 }, header: { Text("評価") })
                 
                 Section(content: {
-                    Text("利用規約")
+                    Button(action: {
+                        isTerms = true
+                    }) {
+                        Text("利用規約")
+                    }
                     HStack {
                         Text("バージョン")
                         Spacer()
@@ -29,6 +39,12 @@ struct SettingView: View {
                     }
                 }, header: { Text("情報") })
             }
+        }
+        .sheet(isPresented: $isTerms) {
+            TermsOfServiceView()
+        }
+        .sheet(isPresented: $isShared) {
+            ActivityView(activityItems: [URLManager.share])
         }
     }
 }
