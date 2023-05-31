@@ -149,9 +149,9 @@
 		8BE8C6C92A2734BE00EC33EB /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8BE8C6D72A27359600EC33EB /* HomeView.swift */,
 				8BE8C6DC2A2735C300EC33EB /* DetailCard */,
 				8BE8C6DB2A2735BB00EC33EB /* MainCard */,
-				8BE8C6D72A27359600EC33EB /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -167,8 +167,8 @@
 		8BE8C6CB2A2734DF00EC33EB /* List */ = {
 			isa = PBXGroup;
 			children = (
-				8BE8C6CD2A27352800EC33EB /* InputView.swift */,
 				8BE8C6CF2A27353500EC33EB /* CostListView.swift */,
+				8BE8C6CD2A27352800EC33EB /* InputView.swift */,
 				8BE8C6D12A27354000EC33EB /* ListRow.swift */,
 				8BE8C6D32A27354C00EC33EB /* PlusButton.swift */,
 			);

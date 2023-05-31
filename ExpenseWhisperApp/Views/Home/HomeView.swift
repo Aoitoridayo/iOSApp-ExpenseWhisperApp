@@ -9,12 +9,23 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ScrollView() {
+                VStack(spacing: 30) {
+                    Spacer()
+                    MainCardView()
+                    DetailCardView()
+                }
+                .padding(.horizontal, 50)
+            }
+        }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(MainCardData())
+            .environmentObject(DetailCardData())
     }
 }

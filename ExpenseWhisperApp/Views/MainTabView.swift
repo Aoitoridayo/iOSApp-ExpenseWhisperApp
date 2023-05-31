@@ -18,6 +18,7 @@ struct MainTabView: View {
         var id: Self { self }
     }
     
+    @EnvironmentObject var mainCardData: MainCardData
     @State private var navigationTitle: String = Tabs.home.rawValue
     @State private var selectionTab: Tabs = .home
     
@@ -58,6 +59,12 @@ struct MainTabView: View {
                     })
                     .tag(Tabs.setting)
             }
+            .navigationTitle(navigationTitle)
+            .navigationBarTitleDisplayMode(.inline)
+            .onChange(of: selectionTab) { _ in
+                navigationTitle = selectionTab.rawValue
+            }
+            .onAppear(perform: mainCardData.onAppear)
         }
     }
 }
