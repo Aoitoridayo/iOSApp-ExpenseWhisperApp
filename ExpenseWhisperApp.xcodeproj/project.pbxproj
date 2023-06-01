@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8B4DD7A42A28E4D5005E68D9 /* BarGraphCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DD7A32A28E4D5005E68D9 /* BarGraphCard.swift */; };
 		8B4DD7A82A28F04C005E68D9 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DD7A72A28F04C005E68D9 /* UserDefaultManager.swift */; };
+		8B4DD7AA2A28F12B005E68D9 /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DD7A92A28F12B005E68D9 /* KeyManager.swift */; };
+		8B4DD7AE2A28F38D005E68D9 /* UserDefaultsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DD7AD2A28F38D005E68D9 /* UserDefaultsError.swift */; };
 		8BE8C6A82A27320200EC33EB /* ExpenseWhisperAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C6A72A27320200EC33EB /* ExpenseWhisperAppApp.swift */; };
 		8BE8C6AC2A27320300EC33EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE8C6AB2A27320300EC33EB /* Assets.xcassets */; };
 		8BE8C6AF2A27320300EC33EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE8C6AE2A27320300EC33EB /* Preview Assets.xcassets */; };
@@ -44,6 +46,8 @@
 /* Begin PBXFileReference section */
 		8B4DD7A32A28E4D5005E68D9 /* BarGraphCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraphCard.swift; sourceTree = "<group>"; };
 		8B4DD7A72A28F04C005E68D9 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		8B4DD7A92A28F12B005E68D9 /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
+		8B4DD7AD2A28F38D005E68D9 /* UserDefaultsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsError.swift; sourceTree = "<group>"; };
 		8BE8C6A42A27320200EC33EB /* ExpenseWhisperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseWhisperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE8C6A72A27320200EC33EB /* ExpenseWhisperAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseWhisperAppApp.swift; sourceTree = "<group>"; };
 		8BE8C6AB2A27320300EC33EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 			children = (
 				8BE8C7142A27830B00EC33EB /* URLManager.swift */,
 				8B4DD7A72A28F04C005E68D9 /* UserDefaultManager.swift */,
+				8B4DD7A92A28F12B005E68D9 /* KeyManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				8BE8C6BB2A2732E200EC33EB /* InputError.swift */,
+				8B4DD7AD2A28F38D005E68D9 /* UserDefaultsError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -317,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B4DD7AA2A28F12B005E68D9 /* KeyManager.swift in Sources */,
 				8BE8C6A82A27320200EC33EB /* ExpenseWhisperAppApp.swift in Sources */,
 				8BE8C71A2A2786C400EC33EB /* Title.swift in Sources */,
 				8BE8C6C22A2733AA00EC33EB /* UsedCost.swift in Sources */,
@@ -332,6 +339,7 @@
 				8BE8C6E22A27362100EC33EB /* Front.swift in Sources */,
 				8BE8C6DE2A2735E700EC33EB /* DetailCardView.swift in Sources */,
 				8BE8C71E2A278C5900EC33EB /* ShareView.swift in Sources */,
+				8B4DD7AE2A28F38D005E68D9 /* UserDefaultsError.swift in Sources */,
 				8BE8C7152A27830B00EC33EB /* URLManager.swift in Sources */,
 				8BE8C6E02A27361100EC33EB /* MainCardView.swift in Sources */,
 				8BE8C6EC2A27677D00EC33EB /* CostChart.swift in Sources */,

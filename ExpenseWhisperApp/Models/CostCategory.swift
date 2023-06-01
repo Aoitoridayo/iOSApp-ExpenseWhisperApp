@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum CostCategory {
+enum CostCategory: Codable {
     case food
     case transportation
     case entertainment
