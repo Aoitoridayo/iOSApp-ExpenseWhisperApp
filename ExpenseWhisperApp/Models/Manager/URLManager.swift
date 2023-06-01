@@ -8,6 +8,5 @@
 import Foundation
 
 struct URLManager {
-    static let termsOfService = "https://maoa9.hp.peraichi.com"
     static let share = "https://github.com/Aoitoridayo/iOSApp-ExpenseWhisperApp"
 }

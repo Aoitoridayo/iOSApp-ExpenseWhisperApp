@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B4DD7A42A28E4D5005E68D9 /* BarGraphCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DD7A32A28E4D5005E68D9 /* BarGraphCard.swift */; };
+		8B4DD7A82A28F04C005E68D9 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DD7A72A28F04C005E68D9 /* UserDefaultManager.swift */; };
 		8BE8C6A82A27320200EC33EB /* ExpenseWhisperAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C6A72A27320200EC33EB /* ExpenseWhisperAppApp.swift */; };
 		8BE8C6AC2A27320300EC33EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE8C6AB2A27320300EC33EB /* Assets.xcassets */; };
 		8BE8C6AF2A27320300EC33EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE8C6AE2A27320300EC33EB /* Preview Assets.xcassets */; };
@@ -32,7 +34,6 @@
 		8BE8C6EA2A27674900EC33EB /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C6E92A27674900EC33EB /* ChartData.swift */; };
 		8BE8C6EC2A27677D00EC33EB /* CostChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C6EB2A27677D00EC33EB /* CostChart.swift */; };
 		8BE8C6EE2A27708500EC33EB /* ChartCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C6ED2A27708500EC33EB /* ChartCard.swift */; };
-		8BE8C7122A277FE700EC33EB /* RankingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C7112A277FE700EC33EB /* RankingCard.swift */; };
 		8BE8C7152A27830B00EC33EB /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C7142A27830B00EC33EB /* URLManager.swift */; };
 		8BE8C7172A27862C00EC33EB /* TermsOfServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C7162A27862C00EC33EB /* TermsOfServiceView.swift */; };
 		8BE8C71A2A2786C400EC33EB /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C7192A2786C400EC33EB /* Title.swift */; };
@@ -41,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B4DD7A32A28E4D5005E68D9 /* BarGraphCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraphCard.swift; sourceTree = "<group>"; };
+		8B4DD7A72A28F04C005E68D9 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		8BE8C6A42A27320200EC33EB /* ExpenseWhisperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseWhisperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE8C6A72A27320200EC33EB /* ExpenseWhisperAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseWhisperAppApp.swift; sourceTree = "<group>"; };
 		8BE8C6AB2A27320300EC33EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,7 +70,6 @@
 		8BE8C6E92A27674900EC33EB /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		8BE8C6EB2A27677D00EC33EB /* CostChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostChart.swift; sourceTree = "<group>"; };
 		8BE8C6ED2A27708500EC33EB /* ChartCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCard.swift; sourceTree = "<group>"; };
-		8BE8C7112A277FE700EC33EB /* RankingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCard.swift; sourceTree = "<group>"; };
 		8BE8C7142A27830B00EC33EB /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
 		8BE8C7162A27862C00EC33EB /* TermsOfServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfServiceView.swift; sourceTree = "<group>"; };
 		8BE8C7192A2786C400EC33EB /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
@@ -86,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B4DD7A62A28F036005E68D9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				8BE8C7142A27830B00EC33EB /* URLManager.swift */,
+				8B4DD7A72A28F04C005E68D9 /* UserDefaultManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		8BE8C69B2A27320200EC33EB = {
 			isa = PBXGroup;
 			children = (
@@ -127,11 +138,11 @@
 		8BE8C6B72A2732A200EC33EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8BE8C6BD2A27332C00EC33EB /* Cost.swift */,
-				8BE8C6BF2A27334D00EC33EB /* CostCategory.swift */,
-				8BE8C6C12A2733AA00EC33EB /* UsedCost.swift */,
+				8B4DD7A62A28F036005E68D9 /* Manager */,
 				8BE8C6EB2A27677D00EC33EB /* CostChart.swift */,
-				8BE8C7142A27830B00EC33EB /* URLManager.swift */,
+				8BE8C6C12A2733AA00EC33EB /* UsedCost.swift */,
+				8BE8C6BF2A27334D00EC33EB /* CostCategory.swift */,
+				8BE8C6BD2A27332C00EC33EB /* Cost.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,7 +214,7 @@
 			children = (
 				8BE8C6E52A27541600EC33EB /* ChartView.swift */,
 				8BE8C6ED2A27708500EC33EB /* ChartCard.swift */,
-				8BE8C7112A277FE700EC33EB /* RankingCard.swift */,
+				8B4DD7A32A28E4D5005E68D9 /* BarGraphCard.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -309,13 +320,13 @@
 				8BE8C6A82A27320200EC33EB /* ExpenseWhisperAppApp.swift in Sources */,
 				8BE8C71A2A2786C400EC33EB /* Title.swift in Sources */,
 				8BE8C6C22A2733AA00EC33EB /* UsedCost.swift in Sources */,
+				8B4DD7A42A28E4D5005E68D9 /* BarGraphCard.swift in Sources */,
 				8BE8C6BC2A2732E200EC33EB /* InputError.swift in Sources */,
 				8BE8C6E62A27541600EC33EB /* ChartView.swift in Sources */,
 				8BE8C6EA2A27674900EC33EB /* ChartData.swift in Sources */,
 				8BE8C6D82A27359600EC33EB /* HomeView.swift in Sources */,
 				8BE8C6D62A27356B00EC33EB /* SettingView.swift in Sources */,
 				8BE8C6C42A2733E500EC33EB /* MainCardData.swift in Sources */,
-				8BE8C7122A277FE700EC33EB /* RankingCard.swift in Sources */,
 				8BE8C6C82A27348500EC33EB /* CostListData.swift in Sources */,
 				8BE8C6E42A27362A00EC33EB /* Back.swift in Sources */,
 				8BE8C6E22A27362100EC33EB /* Front.swift in Sources */,
@@ -330,6 +341,7 @@
 				8BE8C7172A27862C00EC33EB /* TermsOfServiceView.swift in Sources */,
 				8BE8C6D22A27354000EC33EB /* ListRow.swift in Sources */,
 				8BE8C71C2A2786CE00EC33EB /* Detail.swift in Sources */,
+				8B4DD7A82A28F04C005E68D9 /* UserDefaultManager.swift in Sources */,
 				8BE8C6EE2A27708500EC33EB /* ChartCard.swift in Sources */,
 				8BE8C6CE2A27352800EC33EB /* InputView.swift in Sources */,
 				8BE8C6C62A27344100EC33EB /* DetailCardData.swift in Sources */,

@@ -35,6 +35,35 @@ class DetailCardData: ObservableObject {
         }
     }
     
+    func minusCost(cost: Cost) {
+        switch cost.category {
+        case .food:
+            self.costs[0].usedCost -= cost.price
+            MainCardData.used -= cost.price
+        case .transportation:
+            self.costs[1].usedCost -= cost.price
+            MainCardData.used -= cost.price
+        case .entertainment:
+            self.costs[2].usedCost -= cost.price
+            MainCardData.used -= cost.price
+        case .medicalAndCosme:
+            self.costs[3].usedCost -= cost.price
+            MainCardData.used -= cost.price
+        case .livingware:
+            self.costs[4].usedCost -= cost.price
+            MainCardData.used -= cost.price
+        case .others:
+            self.costs[5].usedCost -= cost.price
+            MainCardData.used -= cost.price
+        }
+    }
+    
+    func firstCalclation(costs: [Cost]) {
+        for cost in costs {
+            plusCost(cost: cost)
+        }
+    }
+    
     func updata() {
         MainCardData.used = 0
         

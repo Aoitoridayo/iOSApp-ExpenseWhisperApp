@@ -20,6 +20,7 @@ struct MainTabView: View {
     
     @EnvironmentObject var mainCardData: MainCardData
     @EnvironmentObject var detailCardData: DetailCardData
+    @EnvironmentObject var costListData: CostListData
     
     @State private var navigationTitle: String = Tabs.home.rawValue
     @State private var selectionTab: Tabs = .home
@@ -66,8 +67,11 @@ struct MainTabView: View {
             .onChange(of: selectionTab) { _ in
                 navigationTitle = selectionTab.rawValue
             }
+            .onAppear {
+                detailCardData.firstCalclation(costs: costListData.costList)
+            }
             .onAppear(perform: detailCardData.updata)
-            .onAppear(perform: mainCardData.onAppear)
+            .onAppear(perform: mainCardData.updataCard)
         }
     }
 }
@@ -77,5 +81,6 @@ struct MainTabView_Previews: PreviewProvider {
         MainTabView()
             .environmentObject(MainCardData())
             .environmentObject(DetailCardData())
+            .environmentObject(CostListData())
     }
 }

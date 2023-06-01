@@ -14,6 +14,7 @@ struct ExpenseWhisperAppApp: App {
             MainTabView()
                 .environmentObject(MainCardData())
                 .environmentObject(DetailCardData())
+                .environmentObject(CostListData())
         }
     }
 }

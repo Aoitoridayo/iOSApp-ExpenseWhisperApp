@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct CostListView: View {
-    @StateObject var costListData = CostListData()
+    @EnvironmentObject var mainCardData: MainCardData
+    @EnvironmentObject var costListData: CostListData
+    @EnvironmentObject var detailCardData: DetailCardData
     
     var body: some View {
         NavigationStack {
@@ -21,8 +23,17 @@ struct CostListView: View {
                     List {
                         ForEach(costListData.costList) { item in
                             ListRow(item: item)
+                                .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                                    Button(role: .destructive) {
+                                        costListData.deleteCost(item: item)
+                                        detailCardData.minusCost(cost: item)
+                                        mainCardData.updataCard()
+                                    } label: {
+                                        Image(systemName: "trash")
+                                    }
+                                    .tint(.red)
+                                }
                         }
-                        .onDelete(perform: costListData.delete)
                     }
                     .listStyle(InsetListStyle())
                 }
@@ -39,5 +50,8 @@ struct CostListView: View {
 struct CostListView_Previews: PreviewProvider {
     static var previews: some View {
         CostListView()
+            .environmentObject(MainCardData())
+            .environmentObject(CostListData())
+            .environmentObject(DetailCardData())
     }
 }

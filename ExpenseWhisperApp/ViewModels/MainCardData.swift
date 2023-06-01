@@ -30,11 +30,7 @@ class MainCardData: ObservableObject {
         updataCard()
     }
     
-    func onAppear() {
-        updataCard()
-    }
-    
-    private func updataCard() {
+    func updataCard() {
         goalMoney = Self.goal
         usedMoney = Self.used
         available = Self.goal - Self.used

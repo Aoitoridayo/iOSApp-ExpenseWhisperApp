@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Charts
 
 struct ChartView: View {
     @EnvironmentObject var detailCardData: DetailCardData
@@ -15,8 +14,9 @@ struct ChartView: View {
         NavigationStack {
             ScrollView {
                 Spacer()
-                VStack {
+                VStack(spacing: 30) {
                     ChartCard()
+                    BarGraphCard()
                 }
                 .padding(.horizontal, 50)
             }
