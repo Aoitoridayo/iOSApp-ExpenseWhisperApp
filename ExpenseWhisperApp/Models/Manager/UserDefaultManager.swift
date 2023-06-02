@@ -11,32 +11,31 @@ class UserDefaultsManager {
     let userDefaults = UserDefaults.standard
 
     func setList(costs: [Cost], key: String) throws {
-        guard let json = encodeList(costs: costs) else {
+        guard let json = encode(costs: costs) else {
             throw UserDefaultsError.encodeError
         }
-        userDefaults.set(json, forKey: KeyManager.listKey)
+        userDefaults.set(json, forKey: key)
     }
 
     func getList(key: String) throws -> [Cost] {
         guard let json = userDefaults.string(forKey: key) else {
             throw UserDefaultsError.getFailure
         }
-        guard let costs = decodeList(json: json) else {
+        guard let costs = decode(json: json) else {
             throw UserDefaultsError.decodeError
         }
         return costs
     }
     
-    func setGoal() throws {
-        
+    func setGoal(goal: Int, key: String) {
+        userDefaults.set(goal, forKey: key)
     }
     
-    func getGoal() throws {
-        
+    func getGoal(key: String) -> Int {
+        return userDefaults.integer(forKey: key)
     }
     
-
-    private func encodeList(costs: [Cost]) -> String? {
+    private func encode(costs: [Cost]) -> String? {
         do {
             let data = try JSONEncoder().encode(costs)
             guard let json = String(data: data, encoding: .utf8) else {
@@ -48,7 +47,7 @@ class UserDefaultsManager {
         }
     }
     
-    private func decodeList(json: String) -> [Cost]? {
+    private func decode(json: String) -> [Cost]? {
         do {
             guard let data = json.data(using: .utf8) else {
                 return nil
@@ -58,14 +57,6 @@ class UserDefaultsManager {
         } catch {
             return nil
         }
-    }
-    
-    private func encodeGoal() {
-        
-    }
-    
-    private func decodeGoal() {
-        
     }
 }
 
