@@ -31,7 +31,7 @@ struct InputView: View {
                         .keyboardType(.default)
                     ZStack {
                         TextField("金額 (円)", text: $price)
-                            .keyboardType(.numbersAndPunctuation)
+                            .keyboardType(.numberPad)
                     }
                 }
                 

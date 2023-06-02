@@ -11,6 +11,7 @@
 		8B4DD7A82A28F04C005E68D9 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DD7A72A28F04C005E68D9 /* UserDefaultManager.swift */; };
 		8B4DD7AA2A28F12B005E68D9 /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DD7A92A28F12B005E68D9 /* KeyManager.swift */; };
 		8B4DD7AE2A28F38D005E68D9 /* UserDefaultsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DD7AD2A28F38D005E68D9 /* UserDefaultsError.swift */; };
+		8B90FF712A29B81E002025FA /* SettingGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B90FF702A29B81E002025FA /* SettingGoalView.swift */; };
 		8BE8C6A82A27320200EC33EB /* ExpenseWhisperAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C6A72A27320200EC33EB /* ExpenseWhisperAppApp.swift */; };
 		8BE8C6AC2A27320300EC33EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE8C6AB2A27320300EC33EB /* Assets.xcassets */; };
 		8BE8C6AF2A27320300EC33EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE8C6AE2A27320300EC33EB /* Preview Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		8B4DD7A72A28F04C005E68D9 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		8B4DD7A92A28F12B005E68D9 /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
 		8B4DD7AD2A28F38D005E68D9 /* UserDefaultsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsError.swift; sourceTree = "<group>"; };
+		8B90FF702A29B81E002025FA /* SettingGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingGoalView.swift; sourceTree = "<group>"; };
 		8BE8C6A42A27320200EC33EB /* ExpenseWhisperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseWhisperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE8C6A72A27320200EC33EB /* ExpenseWhisperAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseWhisperAppApp.swift; sourceTree = "<group>"; };
 		8BE8C6AB2A27320300EC33EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			children = (
 				8BE8C6D52A27356B00EC33EB /* SettingView.swift */,
 				8BE8C71D2A278C5900EC33EB /* ShareView.swift */,
+				8B90FF702A29B81E002025FA /* SettingGoalView.swift */,
 				8BE8C7182A2786A600EC33EB /* TermsOfService */,
 			);
 			path = Setting;
@@ -338,6 +341,7 @@
 				8BE8C6E42A27362A00EC33EB /* Back.swift in Sources */,
 				8BE8C6E22A27362100EC33EB /* Front.swift in Sources */,
 				8BE8C6DE2A2735E700EC33EB /* DetailCardView.swift in Sources */,
+				8B90FF712A29B81E002025FA /* SettingGoalView.swift in Sources */,
 				8BE8C71E2A278C5900EC33EB /* ShareView.swift in Sources */,
 				8B4DD7AE2A28F38D005E68D9 /* UserDefaultsError.swift in Sources */,
 				8BE8C7152A27830B00EC33EB /* URLManager.swift in Sources */,

@@ -9,12 +9,13 @@ import Foundation
 
 class MainCardData: ObservableObject {
     static var used: Int = 0
-    static var goal: Int = 50000
+    static var goal: Int = 0
     
     @Published var goalMoney: Int = 0
     @Published var usedMoney: Int = 0
     @Published var available: Int = 0
     @Published var isFlipped = false
+    @Published var isFrist = false
     
     func updataGoal(goal: Int) {
         Self.goal = goal
@@ -38,5 +39,11 @@ class MainCardData: ObservableObject {
     
     func didTapCard() {
         isFlipped.toggle()
+    }
+    
+    func onAppear() {
+        if self.goalMoney == 0 {
+            isFrist = true
+        }
     }
 }

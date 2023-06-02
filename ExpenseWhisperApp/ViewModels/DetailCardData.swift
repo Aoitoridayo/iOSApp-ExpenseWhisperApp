@@ -62,14 +62,14 @@ class DetailCardData: ObservableObject {
         for cost in costs {
             plusCost(cost: cost)
         }
+        updata()
     }
     
-    func updata() {
+    private func updata() {
         MainCardData.used = 0
         
         for cost in costs {
             MainCardData.used += cost.usedCost
         }
     }
-    
 }

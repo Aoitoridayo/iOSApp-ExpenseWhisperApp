@@ -67,11 +67,12 @@ struct MainTabView: View {
             .onChange(of: selectionTab) { _ in
                 navigationTitle = selectionTab.rawValue
             }
+            .onAppear(perform: costListData.onAppear)
             .onAppear {
                 detailCardData.firstCalclation(costs: costListData.costList)
             }
-            .onAppear(perform: detailCardData.updata)
             .onAppear(perform: mainCardData.updataCard)
+            .onAppear(perform: mainCardData.onAppear)
         }
     }
 }

@@ -8,6 +8,10 @@
 import Foundation
 
 class UserDefaultsManager {
+    
+    private init(){}
+    static public let shared = UserDefaultsManager()
+    
     let userDefaults = UserDefaults.standard
 
     func setList(costs: [Cost], key: String) throws {

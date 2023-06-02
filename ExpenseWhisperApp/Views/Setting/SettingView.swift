@@ -8,17 +8,26 @@
 import SwiftUI
 
 struct SettingView: View {
+    @EnvironmentObject var mainCardData: MainCardData
+    
     @State private var isTerms = false
     @State private var isShared = false
+    @State private var isSetView = false
     var body: some View {
         NavigationStack {
             List {
                 Section(content: {
-                    Text("目標設定")
+                    HStack {
+                        Button(action: {
+                            isSetView = true
+                        }) {
+                            Text("目標設定")
+                        }
+                    }
                 }, header: { Text("基本設定") })
                 
                 Section(content: {
-                    Text("レビューを書く")
+                    //                    NavigationLink("レビューを書く", destination: Color.red)
                     Button(action: {
                         isShared = true
                     }) {
@@ -27,11 +36,7 @@ struct SettingView: View {
                 }, header: { Text("評価") })
                 
                 Section(content: {
-                    Button(action: {
-                        isTerms = true
-                    }) {
-                        Text("利用規約")
-                    }
+                    NavigationLink("利用規約", destination: TermsOfServiceView())
                     HStack {
                         Text("バージョン")
                         Spacer()
@@ -40,11 +45,19 @@ struct SettingView: View {
                 }, header: { Text("情報") })
             }
         }
-        .sheet(isPresented: $isTerms) {
-            TermsOfServiceView()
-        }
         .sheet(isPresented: $isShared) {
             ActivityView(activityItems: [URLManager.share])
+        }
+        .sheet(isPresented: $isSetView) {
+            SettingGoalView(
+                text: String(mainCardData.goalMoney),
+                save: { price in
+                    MainCardData.goal = price
+                    mainCardData.updataCard()
+                    isSetView = false
+                },
+                cancel: { isSetView = false }
+            )
         }
     }
 }
@@ -52,5 +65,6 @@ struct SettingView: View {
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
         SettingView()
+            .environmentObject(MainCardData())
     }
 }

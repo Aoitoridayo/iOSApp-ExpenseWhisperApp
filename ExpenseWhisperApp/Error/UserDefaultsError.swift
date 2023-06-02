@@ -11,4 +11,5 @@ enum UserDefaultsError: Error {
     case getFailure
     case decodeError
     case encodeError
+    case unknownError
 }

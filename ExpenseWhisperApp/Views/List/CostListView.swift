@@ -20,20 +20,18 @@ struct CostListView: View {
                         .resizable()
                         .scaledToFit()
                 } else {
-                    List {
-                        ForEach(costListData.costList) { item in
-                            ListRow(item: item)
-                                .swipeActions(edge: .trailing, allowsFullSwipe: true) {
-                                    Button(role: .destructive) {
-                                        costListData.deleteCost(item: item)
-                                        detailCardData.minusCost(cost: item)
-                                        mainCardData.updataCard()
-                                    } label: {
-                                        Image(systemName: "trash")
-                                    }
-                                    .tint(.red)
+                    List(costListData.costList) { item in
+                        ListRow(item: item)
+                            .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                                Button(role: .destructive) {
+                                    costListData.deleteCost(item: item)
+                                    detailCardData.minusCost(cost: item)
+                                    mainCardData.updataCard()
+                                } label: {
+                                    Image(systemName: "trash")
                                 }
-                        }
+                                .tint(.red)
+                            }
                     }
                     .listStyle(InsetListStyle())
                 }
