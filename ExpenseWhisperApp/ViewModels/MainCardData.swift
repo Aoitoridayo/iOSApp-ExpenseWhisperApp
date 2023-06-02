@@ -15,6 +15,7 @@ class MainCardData: ObservableObject {
     @Published var usedMoney: Int = 0
     @Published var available: Int = 0
     @Published var isFlipped = false
+    @Published var isTutprial = false
     @Published var isFrist = false
     
     func updataUsed(price: Int) {
@@ -40,6 +41,7 @@ class MainCardData: ObservableObject {
         let result = UserDefaultsManager.shared.getGoal(key: KeyManager.goalKey)
         self.goalMoney = result
         if self.goalMoney == 0 {
+            isTutprial = true
             isFrist = true
         }
         updataCard()

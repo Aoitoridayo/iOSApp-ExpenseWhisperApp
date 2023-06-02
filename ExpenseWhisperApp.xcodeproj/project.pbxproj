@@ -12,6 +12,9 @@
 		8B4DD7AA2A28F12B005E68D9 /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DD7A92A28F12B005E68D9 /* KeyManager.swift */; };
 		8B4DD7AE2A28F38D005E68D9 /* UserDefaultsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DD7AD2A28F38D005E68D9 /* UserDefaultsError.swift */; };
 		8B90FF712A29B81E002025FA /* SettingGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B90FF702A29B81E002025FA /* SettingGoalView.swift */; };
+		8B90FF732A29E033002025FA /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B90FF722A29E033002025FA /* TutorialView.swift */; };
+		8B90FF782A29E100002025FA /* Tutorial1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B90FF772A29E100002025FA /* Tutorial1.swift */; };
+		8B90FF7A2A29E14A002025FA /* Tutorial2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B90FF792A29E14A002025FA /* Tutorial2.swift */; };
 		8BE8C6A82A27320200EC33EB /* ExpenseWhisperAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C6A72A27320200EC33EB /* ExpenseWhisperAppApp.swift */; };
 		8BE8C6AC2A27320300EC33EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE8C6AB2A27320300EC33EB /* Assets.xcassets */; };
 		8BE8C6AF2A27320300EC33EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE8C6AE2A27320300EC33EB /* Preview Assets.xcassets */; };
@@ -50,6 +53,9 @@
 		8B4DD7A92A28F12B005E68D9 /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
 		8B4DD7AD2A28F38D005E68D9 /* UserDefaultsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsError.swift; sourceTree = "<group>"; };
 		8B90FF702A29B81E002025FA /* SettingGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingGoalView.swift; sourceTree = "<group>"; };
+		8B90FF722A29E033002025FA /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		8B90FF772A29E100002025FA /* Tutorial1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial1.swift; sourceTree = "<group>"; };
+		8B90FF792A29E14A002025FA /* Tutorial2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial2.swift; sourceTree = "<group>"; };
 		8BE8C6A42A27320200EC33EB /* ExpenseWhisperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseWhisperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE8C6A72A27320200EC33EB /* ExpenseWhisperAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseWhisperAppApp.swift; sourceTree = "<group>"; };
 		8BE8C6AB2A27320300EC33EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +108,16 @@
 				8B4DD7A92A28F12B005E68D9 /* KeyManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		8B90FF742A29E0BF002025FA /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				8B90FF722A29E033002025FA /* TutorialView.swift */,
+				8B90FF772A29E100002025FA /* Tutorial1.swift */,
+				8B90FF792A29E14A002025FA /* Tutorial2.swift */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 		8BE8C69B2A27320200EC33EB = {
@@ -158,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				8BE8C6B52A27327D00EC33EB /* MainTabView.swift */,
+				8B90FF742A29E0BF002025FA /* Tutorial */,
 				8BE8C6CC2A2734F000EC33EB /* Chart */,
 				8BE8C6CB2A2734DF00EC33EB /* List */,
 				8BE8C6CA2A2734C800EC33EB /* Setting */,
@@ -334,6 +351,7 @@
 				8BE8C6BC2A2732E200EC33EB /* InputError.swift in Sources */,
 				8BE8C6E62A27541600EC33EB /* ChartView.swift in Sources */,
 				8BE8C6EA2A27674900EC33EB /* ChartData.swift in Sources */,
+				8B90FF7A2A29E14A002025FA /* Tutorial2.swift in Sources */,
 				8BE8C6D82A27359600EC33EB /* HomeView.swift in Sources */,
 				8BE8C6D62A27356B00EC33EB /* SettingView.swift in Sources */,
 				8BE8C6C42A2733E500EC33EB /* MainCardData.swift in Sources */,
@@ -345,6 +363,7 @@
 				8BE8C71E2A278C5900EC33EB /* ShareView.swift in Sources */,
 				8B4DD7AE2A28F38D005E68D9 /* UserDefaultsError.swift in Sources */,
 				8BE8C7152A27830B00EC33EB /* URLManager.swift in Sources */,
+				8B90FF782A29E100002025FA /* Tutorial1.swift in Sources */,
 				8BE8C6E02A27361100EC33EB /* MainCardView.swift in Sources */,
 				8BE8C6EC2A27677D00EC33EB /* CostChart.swift in Sources */,
 				8BE8C6BE2A27332C00EC33EB /* Cost.swift in Sources */,
@@ -352,6 +371,7 @@
 				8BE8C6C02A27334D00EC33EB /* CostCategory.swift in Sources */,
 				8BE8C7172A27862C00EC33EB /* TermsOfServiceView.swift in Sources */,
 				8BE8C6D22A27354000EC33EB /* ListRow.swift in Sources */,
+				8B90FF732A29E033002025FA /* TutorialView.swift in Sources */,
 				8BE8C71C2A2786CE00EC33EB /* Detail.swift in Sources */,
 				8B4DD7A82A28F04C005E68D9 /* UserDefaultManager.swift in Sources */,
 				8BE8C6EE2A27708500EC33EB /* ChartCard.swift in Sources */,

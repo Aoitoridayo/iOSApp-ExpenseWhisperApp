@@ -73,6 +73,19 @@ struct MainTabView: View {
             }
             .onAppear(perform: mainCardData.onAppear)
         }
+        .sheet(isPresented: $mainCardData.isTutprial) {
+            TutorialView()
+        }
+        .sheet(isPresented: $mainCardData.isFrist) {
+            SettingGoalView(
+                text: String(mainCardData.goalMoney),
+                save: {
+                    mainCardData.goalMoney = $0
+                    mainCardData.set()
+                    mainCardData.isFrist = false
+                },
+                cancel: { mainCardData.isFrist = false })
+        }
     }
 }
 
