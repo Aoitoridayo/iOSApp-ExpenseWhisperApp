@@ -17,10 +17,6 @@ class MainCardData: ObservableObject {
     @Published var isFlipped = false
     @Published var isFrist = false
     
-    func updataGoal(goal: Int) {
-        Self.goal = goal
-    }
-    
     func updataUsed(price: Int) {
         Self.used += price
         updataCard()
@@ -32,7 +28,6 @@ class MainCardData: ObservableObject {
     }
     
     func updataCard() {
-        goalMoney = Self.goal
         usedMoney = Self.used
         available = Self.goal - Self.used
     }
@@ -42,8 +37,15 @@ class MainCardData: ObservableObject {
     }
     
     func onAppear() {
+        let result = UserDefaultsManager.shared.getGoal(key: KeyManager.goalKey)
+        self.goalMoney = result
         if self.goalMoney == 0 {
             isFrist = true
         }
+        updataCard()
+    }
+    
+    func set() {
+        UserDefaultsManager.shared.setGoal(goal: goalMoney, key: KeyManager.goalKey)
     }
 }

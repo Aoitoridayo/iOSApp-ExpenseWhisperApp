@@ -52,8 +52,8 @@ struct SettingView: View {
             SettingGoalView(
                 text: String(mainCardData.goalMoney),
                 save: { price in
-                    MainCardData.goal = price
-                    mainCardData.updataCard()
+                    mainCardData.goalMoney = price
+                    mainCardData.set()
                     isSetView = false
                 },
                 cancel: { isSetView = false }
