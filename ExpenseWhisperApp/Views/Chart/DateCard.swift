@@ -18,13 +18,10 @@ struct DateCard: View {
             .shadow(radius: 5)
             .overlay(
                 VStack {
-                    Spacer()
-                    Text("グラフ")
-                        .opacity(0.5)
                     Chart(chartData.dateList) {
                         BarMark(
                             x: .value("kind", $0.value),
-                            y: .value("value", $0.date + "月")
+                            y: .value("value", $0.date + "月 " + "\($0.value)円")
                         )
                         .foregroundStyle(by: .value("Category", $0.date))
                     }

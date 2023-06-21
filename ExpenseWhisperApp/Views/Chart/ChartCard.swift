@@ -19,7 +19,7 @@ struct ChartCard: View {
             .overlay(
                 VStack {
                     Spacer()
-                    Text("グラフ")
+                    Text("カテゴリー別")
                         .opacity(0.5)
                     Chart(detailCardData.costs) {
                         BarMark(
