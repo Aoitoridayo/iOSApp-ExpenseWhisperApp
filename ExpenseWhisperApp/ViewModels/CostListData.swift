@@ -53,7 +53,7 @@ class CostListData: ObservableObject {
         }
     }
     
-    func didTapDetermineButton() {
+    func clearAll() {
         self.costList.removeAll()
         set()
     }

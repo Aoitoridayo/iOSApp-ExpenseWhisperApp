@@ -23,10 +23,8 @@ class ChartData: ObservableObject {
         DateData(date: "11", value: 0),
         DateData(date: "12", value: 0)
     ]
-    
     private func inputDate(item: DateData) {
         guard let index = self.dateList.firstIndex(where: { $0.date == item.date }) else {
-            print("Error")
             return
         }
         dateList[index].value = item.value

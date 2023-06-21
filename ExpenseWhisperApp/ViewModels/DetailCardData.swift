@@ -58,14 +58,14 @@ class DetailCardData: ObservableObject {
         }
     }
     
-    func firstCalclation(costs: [Cost]) {
+    func onAppear(costs: [Cost]) {
         for cost in costs {
             plusCost(cost: cost)
         }
         updata()
     }
     
-    func clear() {
+    func clearAll() {
         for index in self.costs.indices {
             self.costs[index].usedCost = 0
         }

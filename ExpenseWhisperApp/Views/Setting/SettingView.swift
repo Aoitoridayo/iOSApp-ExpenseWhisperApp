@@ -66,8 +66,8 @@ struct SettingView: View {
             }
             Button("続行") {
                 chartData.didTapDetermineButton(value: mainCardData.usedMoney)
-                detailCardData.clear()
-                costListData.didTapDetermineButton()
+                detailCardData.clearAll()
+                costListData.clearAll()
                 mainCardData.clearUsed()
                 isDetermineAlert = false
             }
@@ -80,9 +80,9 @@ struct SettingView: View {
             }
             Button("続行") {
                 mainCardData.clearAll()
-                costListData.didTapDetermineButton()
+                costListData.clearAll()
                 chartData.clearAll()
-                detailCardData.clear()
+                detailCardData.clearAll()
                 isResetAlert = false
             }
         } message: {

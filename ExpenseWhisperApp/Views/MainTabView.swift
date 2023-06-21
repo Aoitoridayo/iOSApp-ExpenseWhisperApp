@@ -69,7 +69,7 @@ struct MainTabView: View {
             }
             .onAppear(perform: costListData.onAppear)
             .onAppear {
-                detailCardData.firstCalclation(costs: costListData.costList)
+                detailCardData.onAppear(costs: costListData.costList)
             }
             .onAppear(perform: mainCardData.onAppear)
         }
