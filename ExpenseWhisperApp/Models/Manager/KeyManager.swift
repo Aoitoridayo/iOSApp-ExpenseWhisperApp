@@ -10,4 +10,5 @@ import Foundation
 struct KeyManager {
     static let goalKey = "MyGoalKey"
     static let listKey = "MyListKey"
+    static let chartsKey = "MyChartsKey"
 }

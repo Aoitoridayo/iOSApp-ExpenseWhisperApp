@@ -12,7 +12,7 @@ struct MainTabView: View {
     enum Tabs: String, CaseIterable, Identifiable {
         case home = "ホーム"
         case input = "入力"
-        case charts = "情報"
+        case charts = "詳細"
         case setting = "設定"
         
         var id: Self { self }
@@ -40,7 +40,7 @@ struct MainTabView: View {
                 CostListView()
                     .tabItem({
                         Image(systemName: "note.text")
-                        Text("詳細")
+                        Text("入力")
                     })
                     .tag(Tabs.input)
                 
@@ -48,7 +48,7 @@ struct MainTabView: View {
                     .tabItem({
                         VStack {
                             Image(systemName: "chart.bar")
-                            Text("データ")
+                            Text("詳細")
                         }
                     })
                     .tag(Tabs.charts)
@@ -82,6 +82,7 @@ struct MainTabView: View {
                 save: {
                     mainCardData.goalMoney = $0
                     mainCardData.set()
+                    mainCardData.updataCard()
                     mainCardData.isFrist = false
                 },
                 cancel: { mainCardData.isFrist = false })
@@ -95,5 +96,6 @@ struct MainTabView_Previews: PreviewProvider {
             .environmentObject(MainCardData())
             .environmentObject(DetailCardData())
             .environmentObject(CostListData())
+            .environmentObject(ChartData())
     }
 }

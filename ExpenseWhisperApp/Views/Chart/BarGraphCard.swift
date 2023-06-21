@@ -10,6 +10,7 @@ import Charts
 
 struct BarGraphCard: View {
     @EnvironmentObject var detailCardData: DetailCardData
+    @EnvironmentObject var mainCardData: MainCardData
     
     var body: some View {
         RoundedRectangle(cornerRadius: 25)
@@ -25,7 +26,7 @@ struct BarGraphCard: View {
                     VStack {
                         HStack {
                             Spacer()
-                            Text("\(MainCardData.used) / \(MainCardData.goal)円")
+                            Text("\(mainCardData.usedMoney) / \(mainCardData.goalMoney)円")
                                 .foregroundColor(.secondary)
                         }
                         .padding(.horizontal, 30)
@@ -35,7 +36,7 @@ struct BarGraphCard: View {
                             )
                             .foregroundStyle(by: .value("Category", $0.category.title))
                         }
-                        .chartXScale(domain: [0, MainCardData.goal])
+                        .chartXScale(domain: [0, mainCardData.goalMoney])
                         .frame(height: 100)
                         .padding(.horizontal, 30)
                         .padding(.bottom, 30)
@@ -54,5 +55,6 @@ struct BarGraphCard_Previews: PreviewProvider {
     static var previews: some View {
         BarGraphCard()
             .environmentObject(DetailCardData())
+            .environmentObject(MainCardData())
     }
 }

@@ -16,17 +16,21 @@ struct CostListView: View {
         NavigationStack {
             ZStack {
                 if costListData.costList.isEmpty {
-                    Image("backImage")
+                    Image("BackGroundImage")
                         .resizable()
                         .scaledToFit()
+                        .opacity(0.8)
+                        .transition(.slide)
                 } else {
                     List(costListData.costList) { item in
                         ListRow(item: item)
                             .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                                 Button(role: .destructive) {
-                                    costListData.deleteCost(item: item)
-                                    detailCardData.minusCost(cost: item)
-                                    mainCardData.updataCard()
+                                    withAnimation {
+                                        costListData.deleteCost(item: item)
+                                        detailCardData.minusCost(cost: item)
+                                        mainCardData.updataCard()
+                                    }
                                 } label: {
                                     Image(systemName: "trash")
                                 }
@@ -34,6 +38,7 @@ struct CostListView: View {
                             }
                     }
                     .listStyle(InsetListStyle())
+                    .transition(.slide)
                 }
                 PlusButton(action: costListData.didTapPlusButton)
             }

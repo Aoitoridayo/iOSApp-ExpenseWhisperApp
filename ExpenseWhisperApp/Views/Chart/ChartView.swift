@@ -15,8 +15,9 @@ struct ChartView: View {
             ScrollView {
                 Spacer()
                 VStack(spacing: 30) {
-                    ChartCard()
                     BarGraphCard()
+                    ChartCard()
+                    DateCard()
                 }
                 .padding(.horizontal, 50)
             }
@@ -28,5 +29,7 @@ struct ChartView_Previews: PreviewProvider {
     static var previews: some View {
         ChartView()
             .environmentObject(DetailCardData())
+            .environmentObject(MainCardData())
+            .environmentObject(ChartData())
     }
 }

@@ -24,7 +24,7 @@ enum CostCategory: Codable {
         case .transportation:
             return "交通費"
         case .entertainment:
-            return "趣味"
+            return "娯楽"
         case .medicalAndCosme:
             return "医薬品・コスメ"
         case .livingware:

@@ -65,6 +65,12 @@ class DetailCardData: ObservableObject {
         updata()
     }
     
+    func clear() {
+        for index in self.costs.indices {
+            self.costs[index].usedCost = 0
+        }
+    }
+    
     private func updata() {
         MainCardData.used = 0
         

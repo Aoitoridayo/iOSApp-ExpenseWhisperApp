@@ -15,7 +15,7 @@ class UserDefaultsManager {
     let userDefaults = UserDefaults.standard
 
     func setList(costs: [Cost], key: String) throws {
-        guard let json = encode(costs: costs) else {
+        guard let json = encode(item: costs) else {
             throw UserDefaultsError.encodeError
         }
         userDefaults.set(json, forKey: key)
@@ -25,10 +25,27 @@ class UserDefaultsManager {
         guard let json = userDefaults.string(forKey: key) else {
             throw UserDefaultsError.getFailure
         }
-        guard let costs = decode(json: json) else {
+        guard let costs = decodeCost(json: json) else {
             throw UserDefaultsError.decodeError
         }
         return costs
+    }
+    
+    func setChart(data: [DateData], key: String) throws {
+        guard let json = encode(item: data) else {
+            throw UserDefaultsError.encodeError
+        }
+        userDefaults.set(json, forKey: key)
+    }
+
+    func getCharts(key: String) throws -> [DateData] {
+        guard let json = userDefaults.string(forKey: key) else {
+            throw UserDefaultsError.getFailure
+        }
+        guard let dateData = decodeDate(json: json) else {
+            throw UserDefaultsError.decodeError
+        }
+        return dateData
     }
     
     func setGoal(goal: Int, key: String) {
@@ -39,9 +56,9 @@ class UserDefaultsManager {
         return userDefaults.integer(forKey: key)
     }
     
-    private func encode(costs: [Cost]) -> String? {
+    private func encode<T: Encodable>(item: [T]) -> String? {
         do {
-            let data = try JSONEncoder().encode(costs)
+            let data = try JSONEncoder().encode(item)
             guard let json = String(data: data, encoding: .utf8) else {
                 return nil
             }
@@ -51,12 +68,24 @@ class UserDefaultsManager {
         }
     }
     
-    private func decode(json: String) -> [Cost]? {
+    private func decodeCost(json: String) -> [Cost]? {
         do {
             guard let data = json.data(using: .utf8) else {
                 return nil
             }
             let costs = try JSONDecoder().decode([Cost].self, from: data)
+            return costs
+        } catch {
+            return nil
+        }
+    }
+    
+    private func decodeDate(json: String) -> [DateData]? {
+        do {
+            guard let data = json.data(using: .utf8) else {
+                return nil
+            }
+            let costs = try JSONDecoder().decode([DateData].self, from: data)
             return costs
         } catch {
             return nil

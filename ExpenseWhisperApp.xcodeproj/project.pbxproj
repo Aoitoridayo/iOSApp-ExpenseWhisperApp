@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B25A04B2A400DE700894852 /* DateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B25A04A2A400DE700894852 /* DateData.swift */; };
 		8B4DD7A42A28E4D5005E68D9 /* BarGraphCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DD7A32A28E4D5005E68D9 /* BarGraphCard.swift */; };
 		8B4DD7A82A28F04C005E68D9 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DD7A72A28F04C005E68D9 /* UserDefaultManager.swift */; };
 		8B4DD7AA2A28F12B005E68D9 /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DD7A92A28F12B005E68D9 /* KeyManager.swift */; };
 		8B4DD7AE2A28F38D005E68D9 /* UserDefaultsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DD7AD2A28F38D005E68D9 /* UserDefaultsError.swift */; };
+		8B81429D2A40A44800B24238 /* DateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B81429C2A40A44800B24238 /* DateCard.swift */; };
 		8B90FF712A29B81E002025FA /* SettingGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B90FF702A29B81E002025FA /* SettingGoalView.swift */; };
 		8B90FF732A29E033002025FA /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B90FF722A29E033002025FA /* TutorialView.swift */; };
 		8B90FF782A29E100002025FA /* Tutorial1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B90FF772A29E100002025FA /* Tutorial1.swift */; };
@@ -48,10 +50,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B25A04A2A400DE700894852 /* DateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateData.swift; sourceTree = "<group>"; };
 		8B4DD7A32A28E4D5005E68D9 /* BarGraphCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraphCard.swift; sourceTree = "<group>"; };
 		8B4DD7A72A28F04C005E68D9 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		8B4DD7A92A28F12B005E68D9 /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
 		8B4DD7AD2A28F38D005E68D9 /* UserDefaultsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsError.swift; sourceTree = "<group>"; };
+		8B81429C2A40A44800B24238 /* DateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCard.swift; sourceTree = "<group>"; };
 		8B90FF702A29B81E002025FA /* SettingGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingGoalView.swift; sourceTree = "<group>"; };
 		8B90FF722A29E033002025FA /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		8B90FF772A29E100002025FA /* Tutorial1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial1.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 				8BE8C6C12A2733AA00EC33EB /* UsedCost.swift */,
 				8BE8C6BF2A27334D00EC33EB /* CostCategory.swift */,
 				8BE8C6BD2A27332C00EC33EB /* Cost.swift */,
+				8B25A04A2A400DE700894852 /* DateData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 				8BE8C6E52A27541600EC33EB /* ChartView.swift */,
 				8BE8C6ED2A27708500EC33EB /* ChartCard.swift */,
 				8B4DD7A32A28E4D5005E68D9 /* BarGraphCard.swift */,
+				8B81429C2A40A44800B24238 /* DateCard.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 				8B90FF7A2A29E14A002025FA /* Tutorial2.swift in Sources */,
 				8BE8C6D82A27359600EC33EB /* HomeView.swift in Sources */,
 				8BE8C6D62A27356B00EC33EB /* SettingView.swift in Sources */,
+				8B81429D2A40A44800B24238 /* DateCard.swift in Sources */,
 				8BE8C6C42A2733E500EC33EB /* MainCardData.swift in Sources */,
 				8BE8C6C82A27348500EC33EB /* CostListData.swift in Sources */,
 				8BE8C6E42A27362A00EC33EB /* Back.swift in Sources */,
@@ -366,6 +373,7 @@
 				8B90FF782A29E100002025FA /* Tutorial1.swift in Sources */,
 				8BE8C6E02A27361100EC33EB /* MainCardView.swift in Sources */,
 				8BE8C6EC2A27677D00EC33EB /* CostChart.swift in Sources */,
+				8B25A04B2A400DE700894852 /* DateData.swift in Sources */,
 				8BE8C6BE2A27332C00EC33EB /* Cost.swift in Sources */,
 				8BE8C6D02A27353500EC33EB /* CostListView.swift in Sources */,
 				8BE8C6C02A27334D00EC33EB /* CostCategory.swift in Sources */,

@@ -9,7 +9,6 @@ import Foundation
 
 class MainCardData: ObservableObject {
     static var used: Int = 0
-    static var goal: Int = 0
     
     @Published var goalMoney: Int = 0
     @Published var usedMoney: Int = 0
@@ -30,7 +29,7 @@ class MainCardData: ObservableObject {
     
     func updataCard() {
         usedMoney = Self.used
-        available = Self.goal - Self.used
+        available = self.goalMoney - self.usedMoney
     }
     
     func didTapCard() {
@@ -49,5 +48,11 @@ class MainCardData: ObservableObject {
     
     func set() {
         UserDefaultsManager.shared.setGoal(goal: goalMoney, key: KeyManager.goalKey)
+    }
+    
+    func clearAll() {
+        clearUsed()
+        self.goalMoney = 0
+        set()
     }
 }
