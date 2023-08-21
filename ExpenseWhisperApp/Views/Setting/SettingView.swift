@@ -17,7 +17,7 @@ struct SettingView: View {
     @State private var isTerms = false
     @State private var isShared = false
     @State private var isSetView = false
-    @State private var isDetermineAlert = false
+//    @State private var isDetermineAlert = false
     @State private var isResetAlert = false
     
     var body: some View {
@@ -29,11 +29,11 @@ struct SettingView: View {
                     }) {
                         Text("目標設定")
                     }
-                    Button(action: {
-                        isDetermineAlert = true
-                    }) {
-                        Text("支出を確定する")
-                    }
+//                    Button(action: {
+//                        isDetermineAlert = true
+//                    }) {
+//                        Text("支出を確定する")
+//                    }
                 }, header: { Text("基本設定") })
                 
                 Section(content: {
@@ -55,38 +55,38 @@ struct SettingView: View {
                 Button(action: {
                     isResetAlert = true
                 }) {
-                    Text("データを削除")
+                    Text("入力をリセット")
                         .foregroundColor(Color.red)
                 }
             }
         }
-        .alert("警告", isPresented: $isDetermineAlert) {
-            Button("キャンセル") {
-                isDetermineAlert = false
-            }
-            Button("続行") {
-                chartData.didTapDetermineButton(value: mainCardData.usedMoney)
-                detailCardData.clearAll()
-                costListData.clearAll()
-                mainCardData.clearUsed()
-                isDetermineAlert = false
-            }
-        } message: {
-            Text("今月の支出が確定され\n入力がリセットされます")
-        }
+//        .alert("警告", isPresented: $isDetermineAlert) {
+//            Button("キャンセル") {
+//                isDetermineAlert = false
+//            }
+//            Button("続行") {
+//                chartData.didTapDetermineButton(value: mainCardData.usedMoney)
+//                detailCardData.clearAll()
+//                costListData.clearAll()
+//                mainCardData.clearUsed()
+//                isDetermineAlert = false
+//            }
+//        } message: {
+//            Text("今月の支出が確定され\n入力がリセットされます")
+//        }
         .alert("警告", isPresented: $isResetAlert) {
             Button("キャンセル") {
                 isResetAlert = false
             }
             Button("続行") {
-                mainCardData.clearAll()
+//                mainCardData.clearAll()
                 costListData.clearAll()
-                chartData.clearAll()
+//                chartData.clearAll()
                 detailCardData.clearAll()
                 isResetAlert = false
             }
         } message: {
-            Text("全てのデータが削除されます")
+            Text("支出の入力がリセットされます")
         }
         .sheet(isPresented: $isShared) {
             ActivityView(activityItems: [URLManager.share])

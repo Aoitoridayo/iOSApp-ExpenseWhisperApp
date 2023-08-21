@@ -17,7 +17,7 @@ struct ChartView: View {
                 VStack(spacing: 30) {
                     BarGraphCard()
                     ChartCard()
-                    DateCard()
+//                    DateCard()
                 }
                 .padding(.horizontal, 50)
             }
